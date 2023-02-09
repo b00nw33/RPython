@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>readme</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="README_files/libs/clipboard/clipboard.min.js"></script>
+<script src="README_files/libs/quarto-html/quarto.js"></script>
+<script src="README_files/libs/quarto-html/popper.min.js"></script>
+<script src="README_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="README_files/libs/quarto-html/anchor.min.js"></script>
+<link href="README_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="README_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="README_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="README_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="README_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="zero-setup-r-workshops-with-github-codespaces" class="level1">
+<h1>Zero-setup R workshops with GitHub Codespaces</h1>
+<p>This is the repository supporting the presentation “Zero-setup R workshops with GitHub Codespaces”.</p>
+<ul>
+<li>Presenter: <a href="https://www.linkedin.com/in/dmsmith/">David Smith</a>, Cloud Advocate at Microsoft</li>
+<li>Presented at: <a href="https://rstudioconf2022.sched.com/event/11iag/zero-setup-r-workshops-with-github-codespaces">rstudio::conf, July 28 2022</a></li>
+<li>Presentation slides: <a href="ZeroSetupWorkshopsRStudioConf2022.pdf">PDF</a></li>
+<li>Presentation video: <a href="https://www.youtube.com/watch?v=2uXLikk30Ew">YouTube</a> | <a href="https://www.rstudio.com/conference/2022/talks/zero-setup-r-workshops-github/">RStudio</a></li>
+</ul>
+<p>You can recreate the demos in the talk using the steps outlined below.</p>
+<section id="dev-containers-in-github-codepaces" class="level2">
+<h2 class="anchored" data-anchor-id="dev-containers-in-github-codepaces">Dev Containers in GitHub Codepaces</h2>
+<p>If you have access to GitHub CodeSpaces, click the green “&lt;&gt; Code” button at the top right on this repository page, and then select “Create codespace on main”. (GitHub CodeSpaces is available with <a href="https://github.com/enterprise">GitHub Enterprise</a> and <a href="https://education.github.com/">GitHub Education</a>.)</p>
+<p>Now, browse to the file <a href="explore-analyze-data-with-R/solution/challenge-Data_Exploration.ipynb">explore-analyze-data-with-R/solution/challenge-Data_Exploration.ipynb</a>. Work through the Jupyter Notebook.</p>
+<p>To open RStudio Server, click the Forwarded Ports “Radio” icon at the bottom of the VS Code Online window.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/forwarded_ports.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Forwarded Ports</figcaption><p></p>
+</figure>
+</div>
+<p>In the Ports tab, click the Open in Browser “World” icon that appears when you hover in the “Local Address” column for the Rstudio row.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ports.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Ports</figcaption><p></p>
+</figure>
+</div>
+<p>This will launch RStudio Server in a new window. Log in with the username and password <code>rstudio/rstudio</code>.</p>
+<ul>
+<li>NOTE: Sometimes, the RStudio window may fail to open with a timeout error. If this happens, try again, or restart the Codepace.</li>
+</ul>
+<p>In RStudio, use the File menu to open the <code>/workspaces</code>, folder and then browse to open the file <code>devcontainers-rstudio</code> / <code>explore-analyze-data-with-R</code> / <code>solution</code> / <code>all-systems-check</code> / <code>test.Rmd</code>. Use the “Knit” submenu to “Knit as HTML” and view the rendered “R Notebook” Markdown document.</p>
+<ul>
+<li>Note: You may be prompted to install an updated version of the <code>markdown</code> package. Select “Yes”.</li>
+</ul>
+</section>
+</section>
+<section id="resources-and-links" class="level1">
+<h1>Resources and Links</h1>
+<ul>
+<li><p><a href="https://github.com/features/codespaces">GitHub Codespaces</a> - Available with GitHub Enterprise and GitHub Education</p></li>
+<li><p><a href="https://github.com/microsoft/workshop-library">Microsoft Workshop Library</a> - The source of the workshop “Explore and analyze data with R” included in this presentation</p></li>
+<li><p><a href="https://www.rocker-project.org/">Rocker</a> - Containers for R</p></li>
+<li><p><a href="https://containers.dev/">Dev Containers</a> - Overview and specification</p></li>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers in Visual Studio Code</a> - Remote-Containers extension</p></li>
+<li><p><a href="https://code.visualstudio.com/">Visual Studio Code</a> - Free editor available for Windows, Mac and Linux</p></li>
+<li><p>Related talk: <a href="https://github.com/revodavid/devcontainers-r">Easy R Tutorials with Dev Containers</a>. This talk provides information on running Dev Containers in a local environment with Visual Studio Code. # Thanks to</p></li>
+<li><p>えいつぴ (@<a href="https://twitter.com/eitsupi">eitsupi</a>): For <a href="https://www.rocker-project.org/images/versioned/rstudio">helpful info on using RStudio in a Rocker container</a></p></li>
+<li><p>Eric Nantz (<a href="https://r-podcast.org/">R-Podcast</a>): For the episode “<a href="https://www.youtube.com/watch?v=4wRiPG9LM3o">Fully containerized R dev environment with Docker, RStudio, and VS-Code</a>”</p></li>
+</ul>
+<section id="image-credits" class="level2">
+<h2 class="anchored" data-anchor-id="image-credits">Image Credits</h2>
+<p>Images used in presentation slides: * <a href="https://commons.wikimedia.org/wiki/File:A_frustrated_and_depressed_man_holds_his_head_in_his_hand.jpg">File:A frustrated and depressed man holds his head in his hand.jpg - Wikimedia Commons</a> * <a href="https://commons.wikimedia.org/wiki/File:Confused_Felipe.jpg">File:Confused Felipe.jpg - Wikimedia Commons</a> * <a href="https://commons.wikimedia.org/wiki/File:Woman_looking_depressed.jpg">File:Woman looking depressed.jpg - Wikimedia Commons</a> * <a href="https://commons.wikimedia.org/wiki/File:Angry_woman.jpg">File:Angry woman.jpg - Wikimedia Commons</a> * “Bit” artwork by Ashley Willis</p>
+</section>
+</section>
+<section id="feedback" class="level1">
+<h1>Feedback</h1>
+<p>If you have any comments or suggestions about this presentation, please leave an issue in this repository.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
