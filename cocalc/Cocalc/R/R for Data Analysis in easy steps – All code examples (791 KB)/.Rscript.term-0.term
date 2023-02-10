@@ -1,0 +1,753 @@
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ ls
+[0m[01;34mMyRScripts[0m  Rscript.term  [01;31mSRC.zip[0m
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ cd MyRScripts/
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ Rscript Multiple.R 
+[1] "Alpha"   "Bravo"   "Charlie"
+[1] "2nd Element:  Bravo"
+[1] "Vector Length:  3"
+[1] "Alpha"   "Bravo"   "Charlie" NA        "Echo"   
+[1] "Vector Length Now:  5"
+[1] "Is alphabet a Vector:  TRUE"
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cs Multiple[K[K[K[K[K[K[K[K[K[K[Kcar[Kt Multiple.R 
+alphabet <- c( "Alpha", "Bravo", "Charlie" )
+
+print( alphabet )
+
+print( paste( "2nd Element: ", alphabet[2] ) )
+
+print( paste( "Vector Length: ", length( alphabet ) ) )
+
+alphabet[ 5 ] <- "Echo"
+
+print( alphabet )
+print( paste( "Vector Length Now: ", length( alphabet ) ) )
+
+print( paste( "Is alphabet a Vector: ", is.vector( alphabet ) ) )]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cat DataType.R 
+title <- "R for Data Analysis"
+result <- paste( "Type of title:", typeof( title ) )
+print( result )
+
+pi <- 3.14159265
+dozen <- 12L
+
+print( paste( "Type of pi:", typeof( pi ) ) )
+print( paste( "Type of dozen:", typeof( dozen ) ) )
+
+flag <- T
+print( paste( "Is flag logical:", is.logical( flag ) ) )]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ Rscript DataType.R 
+[1] "Type of title: character"
+[1] "Type of pi: double"
+[1] "Type of dozen: integer"
+[1] "Is flag logical: TRUE"
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cat Fi
+FilterData.R      FirstDataframe.R  FirstFunction.R   FirstList.R       FirstMatrix.R     FirstPlot.R       FirstVariable.R   
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cat FirstList.R 
+sales <- list( Jan=1500, Feb=1300, Mar=2400 )
+
+sales <- c( sales, list( Apr=1800 ) )
+
+print( unlist( sales ) )
+
+monthly.sales <- unlist( sales, use.names=FALSE )
+
+total.sales <- sum( monthly.sales )
+print( paste( "Total Sales: ", total.sales ) )
+
+average.per.month <- mean( monthly.sales )
+print(paste( "Monthly Average: ", average.per.month ) )
+
+print( paste( "Is sales a List: ", is.list( sales ) ) )]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ Rscript FirstList.R 
+ Jan  Feb  Mar  Apr 
+1500 1300 2400 1800 
+[1] "Total Sales:  7000"
+[1] "Monthly Average:  1750"
+[1] "Is sales a List:  TRUE"
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ pwd
+/home/user/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ pwd[Kcat FirstPlot.R 
+x <- c( 1, 3, 5, 7, 9 )
+y <- c( 8, 0, 4, 6, 2 )
+plot( x, y, type="o" )]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ RscriptF[K FirstPlot.R 
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls
+AddressData.R  Coordinates.R             Default.R         FirstFunction.R  Histogram.R             Lottery.R        RandomNormal.R  SubsetData.R
+Aesthetics.R   CustomPlot.R              Dimension.R       FirstList.R      [0m[01;34mHurricane-Analysis[0m      Manipulate.R     Rplots.pdf      Switch.R
+Arithmetic.R   DataSet-Autos.csv         Else.R            FirstMatrix.R    [01;34mHurricane-Presentation[0m  Math.R           ScatterPlot.R   Themes.R
+BarPlot.R      DataSet-Browsers.csv      ElseIf.R          FirstPlot.R      If.R                    MatrixPlot.R     Sequence.R      Transpose.R
+Bind.R         DataSet-Experiment.csv    Environment.R     FirstVariable.R  ImportData.R            MergeData.R      SmoothPlot.R    VectorArithmetic.R
+BoxPlot.R      DataSet-HighTemps.csv     ExamineData.R     ForIn.R          InstallPackage.R        Multiple.R       Statistics.R    VectorComparison.R
+BreakNext.R    DataSet-Hurricanes.csv    Facets.R          Geometries.R     LLN.R                   MultiplePlots.R  Stats.R         While.R
+ColumnData.R   DataSet-LowTemps.csv      FactorData.R      GroupPlot.R      Label.R                 Name.R           StaturePlot.R
+Comment.R      DataSet-ProfSalaries.csv  FilterData.R      Hello.R          LabelPlot.R             Precedence.R     String.R
+Comparison.R   DataType.R                FirstDataframe.R  Help.R           Logic.R                 Random.R         Subset.R
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ pwd
+/home/user/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls
+AddressData.R  Coordinates.R             Default.R         FirstFunction.R  Histogram.R             Lottery.R        RandomNormal.R  SubsetData.R
+Aesthetics.R   CustomPlot.R              Dimension.R       FirstList.R      [0m[01;34mHurricane-Analysis[0m      Manipulate.R     Rplots.pdf      Switch.R
+Arithmetic.R   DataSet-Autos.csv         Else.R            FirstMatrix.R    [01;34mHurricane-Presentation[0m  Math.R           ScatterPlot.R   Themes.R
+BarPlot.R      DataSet-Browsers.csv      ElseIf.R          FirstPlot.R      If.R                    MatrixPlot.R     Sequence.R      Transpose.R
+Bind.R         DataSet-Experiment.csv    Environment.R     FirstVariable.R  ImportData.R            MergeData.R      SmoothPlot.R    VectorArithmetic.R
+BoxPlot.R      DataSet-HighTemps.csv     ExamineData.R     ForIn.R          InstallPackage.R        Multiple.R       Statistics.R    VectorComparison.R
+BreakNext.R    DataSet-Hurricanes.csv    Facets.R          Geometries.R     LLN.R                   MultiplePlots.R  Stats.R         While.R
+ColumnData.R   DataSet-LowTemps.csv      FactorData.R      GroupPlot.R      Label.R                 Name.R           StaturePlot.R
+Comment.R      DataSet-ProfSalaries.csv  FilterData.R      Hello.R          LabelPlot.R             Precedence.R     String.R
+Comparison.R   DataType.R                FirstDataframe.R  Help.R           Logic.R                 Random.R         Subset.R
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cd..
+bash: cd..: command not found
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ cd
+]0;~[01;34m~[00m$ 
+]0;~[01;34m~[00m$ s
+bash: s: command not found
+]0;~[01;34m~[00m$ la
+ .2018-11-25-223043.tex.syncdb   .bashrc   .gitconfig     .jupyter-blobs-v0.db   .sage.sagews.sage-chat   .the_latex_book.tex.syncdb   [0m[01;34mPython[0m     [01;34mWorksheet[0m
+ .2018-12-04-135514.tex.syncdb   [01;34m.cache[0m    .gitexcludes   .lesshst               [01;36m.smc[0m                     [01;34mBash[0m                         [01;34mR[0m
+ .bash_history                   [01;34m.ccache[0m   [01;34m.ipython[0m       [01;34m.local[0m                 [01;34m.snapshots[0m              [01;34m'Data Science'[0m                [01;34mSageMath[0m
+ [01;36m.bash_profile[0m                   [01;34m.config[0m   [01;34m.jupyter[0m       [01;34m.sage[0m                  [01;34m.ssh[0m                     [01;34mJavascript[0m                   [01;34mTesting1[0m
+]0;~[01;34m~[00m$ cd R
+]0;~/R[01;34m~/R[00m$ cd R\ for\ Data\ Analysis\ in\ easy\ steps\ –\ All\ code\ examples\ \(791\ KB\)/
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ ls
+[0m[01;34mMyRScripts[0m  Rscript.term  [01;31mSRC.zip[0m
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ jupytext ./MyRScripts/*.R .[K[K[K[K[KFirstPlot.R [C[C[C[1@ [1@-[1@-[1@t[1@o[C[1@ [1@t[1@e[1@s[1@t
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 472, in jupytext
+    args.output_format = long_form_one_format(args.output_format)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/formats.py", line 624, in long_form_one_format
+    raise JupytextFormatError(
+jupytext.formats.JupytextFormatError: 'test' is not a notebook extension (one of .ipynb, .md, .markdown, .Rmd, .py, .coco, .R, .r, .jl, .cpp, .ss, .clj, .scm, .sh, .ps1, .q, .m, .pro, .js, .ts, .scala, .rs, .robot, .resource, .cs, .fsx, .fs, .sos, .java, .groovy, .sage, .ml, .hs, .tcl, .mac, .qmd, .myst, .mystnb, .mnb), nor a notebook format (one of light, sphinx, nomarker, markdown, myst, percent, pandoc, hydrogen, rmarkdown, spin, quarto)
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ jupytext --to test ./MyRScripts/FirstPlot.R [1@.[1@i[1@p[1@y[1@n[1@b
+[warning] You might have passed a file name to the '--to' option, when a format description was expected. Maybe you want to use the '-o' option instead?
+[jupytext] Reading ./MyRScripts/FirstPlot.R in format R
+[jupytext] Writing ./MyRScripts/FirstPlottest.ipynb
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ jupytext --to test.ipynb ./MyRScripts/FirstPlot.R [1P[1P[1P[1P
+[jupytext] Reading ./MyRScripts/FirstPlot.R in format R
+[jupytext] Writing ./MyRScripts/FirstPlot.ipynb
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ ls
+[0m[01;34mMyRScripts[0m  Rscript.term  [01;31mSRC.zip[0m
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)[00m$ cd MyRScripts/
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls
+AddressData.R  Coordinates.R             Default.R         FirstFunction.R      Hello.R                 LabelPlot.R      Precedence.R    String.R
+Aesthetics.R   CustomPlot.R              Dimension.R       FirstList.R          Help.R                  Logic.R          Random.R        Subset.R
+Arithmetic.R   DataSet-Autos.csv         Else.R            FirstMatrix.R        Histogram.R             Lottery.R        RandomNormal.R  SubsetData.R
+BarPlot.R      DataSet-Browsers.csv      ElseIf.R          FirstPlot.R          [0m[01;34mHurricane-Analysis[0m      Manipulate.R     Rplots.pdf      Switch.R
+Bind.R         DataSet-Experiment.csv    Environment.R     FirstPlot.ipynb      [01;34mHurricane-Presentation[0m  Math.R           ScatterPlot.R   Themes.R
+BoxPlot.R      DataSet-HighTemps.csv     ExamineData.R     FirstPlottest.ipynb  If.R                    MatrixPlot.R     Sequence.R      Transpose.R
+BreakNext.R    DataSet-Hurricanes.csv    Facets.R          FirstVariable.R      ImportData.R            MergeData.R      SmoothPlot.R    VectorArithmetic.R
+ColumnData.R   DataSet-LowTemps.csv      FactorData.R      ForIn.R              InstallPackage.R        Multiple.R       Statistics.R    VectorComparison.R
+Comment.R      DataSet-ProfSalaries.csv  FilterData.R      Geometries.R         LLN.R                   MultiplePlots.R  Stats.R         While.R
+Comparison.R   DataType.R                FirstDataframe.R  GroupPlot.R          Label.R                 Name.R           StaturePlot.R
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm [K *.ipynb
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls
+AddressData.R  Coordinates.R             Default.R         FirstFunction.R  Histogram.R             Lottery.R        RandomNormal.R  SubsetData.R
+Aesthetics.R   CustomPlot.R              Dimension.R       FirstList.R      [0m[01;34mHurricane-Analysis[0m      Manipulate.R     Rplots.pdf      Switch.R
+Arithmetic.R   DataSet-Autos.csv         Else.R            FirstMatrix.R    [01;34mHurricane-Presentation[0m  Math.R           ScatterPlot.R   Themes.R
+BarPlot.R      DataSet-Browsers.csv      ElseIf.R          FirstPlot.R      If.R                    MatrixPlot.R     Sequence.R      Transpose.R
+Bind.R         DataSet-Experiment.csv    Environment.R     FirstVariable.R  ImportData.R            MergeData.R      SmoothPlot.R    VectorArithmetic.R
+BoxPlot.R      DataSet-HighTemps.csv     ExamineData.R     ForIn.R          InstallPackage.R        Multiple.R       Statistics.R    VectorComparison.R
+BreakNext.R    DataSet-Hurricanes.csv    Facets.R          Geometries.R     LLN.R                   MultiplePlots.R  Stats.R         While.R
+ColumnData.R   DataSet-LowTemps.csv      FactorData.R      GroupPlot.R      Label.R                 Name.R           StaturePlot.R
+Comment.R      DataSet-ProfSalaries.csv  FilterData.R      Hello.R          LabelPlot.R             Precedence.R     String.R
+Comparison.R   DataType.R                FirstDataframe.R  Help.R           Logic.R                 Random.R         Subset.R
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls[Kjupytext --to .ipynb *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb
+[jupytext] Reading FirstFunction.R in format R
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 488, in jupytext
+    exit_code += jupytext_single_file(nb_file, args, log)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 552, in jupytext_single_file
+    notebook = read(nb_file, fmt=fmt, config=config)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 412, in read
+    return read(stream, as_version=as_version, fmt=fmt, config=config, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 421, in read
+    return reads(fp.read(), fmt, config=config, **kwargs)
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 202: invalid start byte
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ls
+AddressData.R      BreakNext.ipynb       DataSet-Experiment.csv    ElseIf.R           FirstDataframe.ipynb  [0m[01;34mHurricane-Presentation[0m  Multiple.R       String.R
+AddressData.ipynb  ColumnData.R          DataSet-HighTemps.csv     ElseIf.ipynb       FirstFunction.R       If.R                    MultiplePlots.R  Subset.R
+Aesthetics.R       ColumnData.ipynb      DataSet-Hurricanes.csv    Environment.R      FirstList.R           ImportData.R            Name.R           SubsetData.R
+Aesthetics.ipynb   Comment.R             DataSet-LowTemps.csv      Environment.ipynb  FirstMatrix.R         InstallPackage.R        Precedence.R     Switch.R
+Arithmetic.R       Comment.ipynb         DataSet-ProfSalaries.csv  ExamineData.R      FirstPlot.R           LLN.R                   Random.R         Themes.R
+Arithmetic.ipynb   Comparison.R          DataType.R                ExamineData.ipynb  FirstVariable.R       Label.R                 RandomNormal.R   Transpose.R
+BarPlot.R          Comparison.ipynb      DataType.ipynb            Facets.R           ForIn.R               LabelPlot.R             Rplots.pdf       VectorArithmetic.R
+BarPlot.ipynb      Coordinates.R         Default.R                 Facets.ipynb       Geometries.R          Logic.R                 ScatterPlot.R    VectorComparison.R
+Bind.R             Coordinates.ipynb     Default.ipynb             FactorData.R       GroupPlot.R           Lottery.R               Sequence.R       While.R
+Bind.ipynb         CustomPlot.R          Dimension.R               FactorData.ipynb   Hello.R               Manipulate.R            SmoothPlot.R
+BoxPlot.R          CustomPlot.ipynb      Dimension.ipynb           FilterData.R       Help.R                Math.R                  Statistics.R
+BoxPlot.ipynb      DataSet-Autos.csv     Else.R                    FilterData.ipynb   Histogram.R           MatrixPlot.R            Stats.R
+BreakNext.R        DataSet-Browsers.csv  Else.ipynb                FirstDataframe.R   [01;34mHurricane-Analysis[0m    MergeData.R             StaturePlot.R
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ lsjupytext --to .ipynb *.R[C[C[C[1P *.R[1P *.R[1P *.R[1P *.R[1P *.R[1P *.Rn *.Ro *.Rt *.Reb *.Ro *.Ro *.Rk *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstList.R in format R
+[jupytext] Writing FirstList.ipynb
+[jupytext] Reading FirstMatrix.R in format R
+[jupytext] Writing FirstMatrix.ipynb
+[jupytext] Reading FirstPlot.R in format R
+[jupytext] Writing FirstPlot.ipynb
+[jupytext] Reading FirstVariable.R in format R
+[jupytext] Writing FirstVariable.ipynb
+[jupytext] Reading ForIn.R in format R
+[jupytext] Writing ForIn.ipynb
+[jupytext] Reading Geometries.R in format R
+[jupytext] Writing Geometries.ipynb
+[jupytext] Reading GroupPlot.R in format R
+[jupytext] Writing GroupPlot.ipynb
+[jupytext] Reading Hello.R in format R
+[jupytext] Writing Hello.ipynb
+[jupytext] Reading Help.R in format R
+[jupytext] Writing Help.ipynb
+[jupytext] Reading Histogram.R in format R
+[jupytext] Writing Histogram.ipynb
+[jupytext] Reading If.R in format R
+[jupytext] Writing If.ipynb
+[jupytext] Reading ImportData.R in format R
+[jupytext] Writing ImportData.ipynb
+[jupytext] Reading InstallPackage.R in format R
+[jupytext] Writing InstallPackage.ipynb
+[jupytext] Reading LLN.R in format R
+[jupytext] Writing LLN.ipynb
+[jupytext] Reading Label.R in format R
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 488, in jupytext
+    exit_code += jupytext_single_file(nb_file, args, log)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 552, in jupytext_single_file
+    notebook = read(nb_file, fmt=fmt, config=config)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 412, in read
+    return read(stream, as_version=as_version, fmt=fmt, config=config, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 421, in read
+    return reads(fp.read(), fmt, config=config, **kwargs)
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 392: invalid start byte
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Label.R 
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Label.R jupytext --to notebook *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstList.R in format R
+[jupytext] Writing FirstList.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstMatrix.R in format R
+[jupytext] Writing FirstMatrix.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstPlot.R in format R
+[jupytext] Writing FirstPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstVariable.R in format R
+[jupytext] Writing FirstVariable.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ForIn.R in format R
+[jupytext] Writing ForIn.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Geometries.R in format R
+[jupytext] Writing Geometries.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading GroupPlot.R in format R
+[jupytext] Writing GroupPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Hello.R in format R
+[jupytext] Writing Hello.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Help.R in format R
+[jupytext] Writing Help.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Histogram.R in format R
+[jupytext] Writing Histogram.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading If.R in format R
+[jupytext] Writing If.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ImportData.R in format R
+[jupytext] Writing ImportData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading InstallPackage.R in format R
+[jupytext] Writing InstallPackage.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LLN.R in format R
+[jupytext] Writing LLN.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LabelPlot.R in format R
+[jupytext] Writing LabelPlot.ipynb
+[jupytext] Reading Logic.R in format R
+[jupytext] Writing Logic.ipynb
+[jupytext] Reading Lottery.R in format R
+[jupytext] Writing Lottery.ipynb
+[jupytext] Reading Manipulate.R in format R
+[jupytext] Writing Manipulate.ipynb
+[jupytext] Reading Math.R in format R
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 488, in jupytext
+    exit_code += jupytext_single_file(nb_file, args, log)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 552, in jupytext_single_file
+    notebook = read(nb_file, fmt=fmt, config=config)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 412, in read
+    return read(stream, as_version=as_version, fmt=fmt, config=config, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 421, in read
+    return reads(fp.read(), fmt, config=config, **kwargs)
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 286: invalid start byte
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Ms[Kath.R 
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Math.R jupytext --to notebook *.R[15Prm Label.R jupytext --to notebook *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstList.R in format R
+[jupytext] Writing FirstList.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstMatrix.R in format R
+[jupytext] Writing FirstMatrix.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstPlot.R in format R
+[jupytext] Writing FirstPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstVariable.R in format R
+[jupytext] Writing FirstVariable.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ForIn.R in format R
+[jupytext] Writing ForIn.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Geometries.R in format R
+[jupytext] Writing Geometries.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading GroupPlot.R in format R
+[jupytext] Writing GroupPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Hello.R in format R
+[jupytext] Writing Hello.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Help.R in format R
+[jupytext] Writing Help.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Histogram.R in format R
+[jupytext] Writing Histogram.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading If.R in format R
+[jupytext] Writing If.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ImportData.R in format R
+[jupytext] Writing ImportData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading InstallPackage.R in format R
+[jupytext] Writing InstallPackage.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LLN.R in format R
+[jupytext] Writing LLN.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LabelPlot.R in format R
+[jupytext] Writing LabelPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Logic.R in format R
+[jupytext] Writing Logic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Lottery.R in format R
+[jupytext] Writing Lottery.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Manipulate.R in format R
+[jupytext] Writing Manipulate.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading MatrixPlot.R in format R
+[jupytext] Writing MatrixPlot.ipynb
+[jupytext] Reading MergeData.R in format R
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 488, in jupytext
+    exit_code += jupytext_single_file(nb_file, args, log)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 552, in jupytext_single_file
+    notebook = read(nb_file, fmt=fmt, config=config)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 412, in read
+    return read(stream, as_version=as_version, fmt=fmt, config=config, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 421, in read
+    return reads(fp.read(), fmt, config=config, **kwargs)
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 162: invalid start byte
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm MergeData.R 
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm MergeData.R jupytext --to notebook *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstList.R in format R
+[jupytext] Writing FirstList.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstMatrix.R in format R
+[jupytext] Writing FirstMatrix.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstPlot.R in format R
+[jupytext] Writing FirstPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstVariable.R in format R
+[jupytext] Writing FirstVariable.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ForIn.R in format R
+[jupytext] Writing ForIn.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Geometries.R in format R
+[jupytext] Writing Geometries.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading GroupPlot.R in format R
+[jupytext] Writing GroupPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Hello.R in format R
+[jupytext] Writing Hello.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Help.R in format R
+[jupytext] Writing Help.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Histogram.R in format R
+[jupytext] Writing Histogram.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading If.R in format R
+[jupytext] Writing If.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ImportData.R in format R
+[jupytext] Writing ImportData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading InstallPackage.R in format R
+[jupytext] Writing InstallPackage.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LLN.R in format R
+[jupytext] Writing LLN.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LabelPlot.R in format R
+[jupytext] Writing LabelPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Logic.R in format R
+[jupytext] Writing Logic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Lottery.R in format R
+[jupytext] Writing Lottery.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Manipulate.R in format R
+[jupytext] Writing Manipulate.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading MatrixPlot.R in format R
+[jupytext] Writing MatrixPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Multiple.R in format R
+[jupytext] Writing Multiple.ipynb
+[jupytext] Reading MultiplePlots.R in format R
+[jupytext] Writing MultiplePlots.ipynb
+[jupytext] Reading Name.R in format R
+Traceback (most recent call last):
+  File "/usr/local/bin/jupytext", line 8, in <module>
+    sys.exit(jupytext())
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 488, in jupytext
+    exit_code += jupytext_single_file(nb_file, args, log)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/cli.py", line 552, in jupytext_single_file
+    notebook = read(nb_file, fmt=fmt, config=config)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 412, in read
+    return read(stream, as_version=as_version, fmt=fmt, config=config, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/jupytext/jupytext.py", line 421, in read
+    return reads(fp.read(), fmt, config=config, **kwargs)
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb0 in position 383: invalid start byte
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Name.R e[K[K
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ rm Name.Rjupytext --to notebook *.R
+[jupytext] Reading AddressData.R in format R
+[jupytext] Writing AddressData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Aesthetics.R in format R
+[jupytext] Writing Aesthetics.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Arithmetic.R in format R
+[jupytext] Writing Arithmetic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BarPlot.R in format R
+[jupytext] Writing BarPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Bind.R in format R
+[jupytext] Writing Bind.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BoxPlot.R in format R
+[jupytext] Writing BoxPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading BreakNext.R in format R
+[jupytext] Writing BreakNext.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ColumnData.R in format R
+[jupytext] Writing ColumnData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comment.R in format R
+[jupytext] Writing Comment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Comparison.R in format R
+[jupytext] Writing Comparison.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Coordinates.R in format R
+[jupytext] Writing Coordinates.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading CustomPlot.R in format R
+[jupytext] Writing CustomPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading DataType.R in format R
+[jupytext] Writing DataType.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Default.R in format R
+[jupytext] Writing Default.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Dimension.R in format R
+[jupytext] Writing Dimension.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Else.R in format R
+[jupytext] Writing Else.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ElseIf.R in format R
+[jupytext] Writing ElseIf.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Environment.R in format R
+[jupytext] Writing Environment.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ExamineData.R in format R
+[jupytext] Writing ExamineData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Facets.R in format R
+[jupytext] Writing Facets.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FactorData.R in format R
+[jupytext] Writing FactorData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FilterData.R in format R
+[jupytext] Writing FilterData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstDataframe.R in format R
+[jupytext] Writing FirstDataframe.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstList.R in format R
+[jupytext] Writing FirstList.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstMatrix.R in format R
+[jupytext] Writing FirstMatrix.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstPlot.R in format R
+[jupytext] Writing FirstPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading FirstVariable.R in format R
+[jupytext] Writing FirstVariable.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ForIn.R in format R
+[jupytext] Writing ForIn.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Geometries.R in format R
+[jupytext] Writing Geometries.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading GroupPlot.R in format R
+[jupytext] Writing GroupPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Hello.R in format R
+[jupytext] Writing Hello.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Help.R in format R
+[jupytext] Writing Help.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Histogram.R in format R
+[jupytext] Writing Histogram.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading If.R in format R
+[jupytext] Writing If.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading ImportData.R in format R
+[jupytext] Writing ImportData.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading InstallPackage.R in format R
+[jupytext] Writing InstallPackage.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LLN.R in format R
+[jupytext] Writing LLN.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading LabelPlot.R in format R
+[jupytext] Writing LabelPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Logic.R in format R
+[jupytext] Writing Logic.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Lottery.R in format R
+[jupytext] Writing Lottery.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Manipulate.R in format R
+[jupytext] Writing Manipulate.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading MatrixPlot.R in format R
+[jupytext] Writing MatrixPlot.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Multiple.R in format R
+[jupytext] Writing Multiple.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading MultiplePlots.R in format R
+[jupytext] Writing MultiplePlots.ipynb (destination file replaced [use --update to preserve cell outputs and ids])
+[jupytext] Reading Precedence.R in format R
+[jupytext] Writing Precedence.ipynb
+[jupytext] Reading Random.R in format R
+[jupytext] Writing Random.ipynb
+[jupytext] Reading RandomNormal.R in format R
+[jupytext] Writing RandomNormal.ipynb
+[jupytext] Reading ScatterPlot.R in format R
+[jupytext] Writing ScatterPlot.ipynb
+[jupytext] Reading Sequence.R in format R
+[jupytext] Writing Sequence.ipynb
+[jupytext] Reading SmoothPlot.R in format R
+[jupytext] Writing SmoothPlot.ipynb
+[jupytext] Reading Statistics.R in format R
+[jupytext] Writing Statistics.ipynb
+[jupytext] Reading Stats.R in format R
+[jupytext] Writing Stats.ipynb
+[jupytext] Reading StaturePlot.R in format R
+[jupytext] Writing StaturePlot.ipynb
+[jupytext] Reading String.R in format R
+[jupytext] Writing String.ipynb
+[jupytext] Reading Subset.R in format R
+[jupytext] Writing Subset.ipynb
+[jupytext] Reading SubsetData.R in format R
+[jupytext] Writing SubsetData.ipynb
+[jupytext] Reading Switch.R in format R
+[jupytext] Writing Switch.ipynb
+[jupytext] Reading Themes.R in format R
+[jupytext] Writing Themes.ipynb
+[jupytext] Reading Transpose.R in format R
+[jupytext] Writing Transpose.ipynb
+[jupytext] Reading VectorArithmetic.R in format R
+[jupytext] Writing VectorArithmetic.ipynb
+[jupytext] Reading VectorComparison.R in format R
+[jupytext] Writing VectorComparison.ipynb
+[jupytext] Reading While.R in format R
+[jupytext] Writing While.ipynb
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ [K]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ [K]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ ps
+    PID TTY          TIME CMD
+   2980 pts/1    00:00:00 bash
+   5689 pts/1    00:00:00 ps
+]0;~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[01;34m~/R/R for Data Analysis in easy steps – All code examples (791 KB)/MyRScripts[00m$ 

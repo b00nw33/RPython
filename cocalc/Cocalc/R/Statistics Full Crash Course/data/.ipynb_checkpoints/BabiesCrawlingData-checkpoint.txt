@@ -1,0 +1,13 @@
+birth_month avg_crawling_age temperature
+January     29.84            66
+February    30.52            73
+March       29.70            72
+April       31.84            63
+May         28.58            52
+June        31.44            39
+July        33.64            33
+August      32.82            30
+September   33.83            33
+October     33.35            37
+November    33.38            48
+December    32.32            57

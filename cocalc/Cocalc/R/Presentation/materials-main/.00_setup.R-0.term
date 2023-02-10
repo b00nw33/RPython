@@ -1,0 +1,38 @@
+]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ [K]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ ls
+00_setup.R          [0m[01;34m05-accessible-design[0m       [01;34m09-design-components[0m
+[01;34m01-introduction[0m     [01;34m06-intro-css[0m               LICENSE.md
+[01;34m02-style-guide[0m      [01;34m07-accessibility-css-html[0m  README.md
+[01;34m03-xaringan-extras[0m  [01;34m08-more-css[0m                presentable-user2021.Rproj
+]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ R 00_setup.R 
+ARGUMENT '00_setup.R' __ignored__
+
+
+R version 4.2.2 Patched (2022-11-10 r83330) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> q()
+Save workspace image? [y/n/c]: R[Kn
+]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ Rscript 00_setup.R 
+Installing packages into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning in install.packages(c("xaringan", "metathis")) :
+  'lib = "/usr/local/lib/R/site-library"' is not writable
+Error in install.packages(c("xaringan", "metathis")) : 
+  unable to install packages
+Execution halted
+]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ [K]0;~/R/Presentation/materials-main[01;34m~/R/Presentation/materials-main[00m$ 

@@ -1,0 +1,115 @@
+
+---
+title: "Example PDF Document"
+# author: "Quantargo"
+# date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+# https://r4ds.had.co.nz/r-markdown.html
+# https://ourcodingclub.github.io/tutorials/rmarkdown/
+# https://cran.r-project.org/web/packages/rmarkdown/vignettes/rmarkdown.html
+# https://bookdown.org/yihui/rmarkdown/pdf-document.html
+# https://www.quantargo.com/qbits/qbit-rmarkdown-example-pdf-document-FEN_bLjx2?panel=viewer
+# https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(dplyr)
+
+smaller <- diamonds %>% 
+  filter(carat <= 2.5)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+We have data about `r nrow(diamonds)` diamonds. Only 
+`r nrow(diamonds) - nrow(smaller)` are larger than
+2.5 carats. The distribution of the remainder is shown
+below:
+
+```{r, echo = FALSE}
+smaller %>% 
+  ggplot(aes(carat)) +
+  geom_freqpoly(binwidth = 0.01)
+```
+
+If you prefer that data be displayed with additional formatting you can use the knitr::kable function. The code below generates Table 27.1.
+
+```{r, echo = FALSE}
+knitr::kable(
+  mtcars[1:10, ],
+  caption = "A knitr kable."
+)
+```
+
+RMarkdown combines the simplicity of `Markdown` with the flexibility of `Latex` allowing you to input mathematical equations within pdf documents.
+
+1. Text with `in line` $\beta$ `code`  or ...
+1. `Check` with \texttt{in line $\beta$ code}.
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+
+```{=latex}
+\begin{tabular}{ll}
+A & B \\
+A & B \\
+\end{tabular}
+
+\begin{align}
+v^2 &= u^2+2as \\
+& = \exp(mt) \star \left\{\frac{l}{2\sqrt{\pi t^3}} \exp(-l^2/{4t})\right\} \\
+& = F_1 * F_2
+\end{align}
+```
+
+Another way to include `Latex` content is as follows: `r paste0("$\\beta$ = ", mean(mtcars$mpg))`
+
+For inline formulas, enclose the formula in `$…$`. For displayed formulas, use `$$…$$`. These render differently. For example, type $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$ to show (which is inline mode) or type $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ to show as formula.
+
+
+```{mermaid}
+sequenceDiagram
+Alice ->> Bob: Hello Bob, how are you?
+Bob-->>John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br/>
+long time, so long<br/>
+that the text does<br/>
+not fit on a row.
+
+Bob-->Alice: Checking with John...
+Alice->John: Yes... John, how are you?
+```
+
+```{=latex}
+\begin{align*}
+v^2 &=u^2+2as \\
+10^2 &=u^2+2(10)(3.2) \\
+u^2 &=100-64 \\
+&=36 \\
+u&=\sqrt{36} \\
+&=6ms^{-1}
+\end{align*}
+```
