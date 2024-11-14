@@ -1,0 +1,94 @@
+---
+title: "My R book"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+# Introduction
+
+In this book, I document some of the common uses of R as a data analysis tool, starting from basics.
+
+Some resources I refer to:
+
+## General
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) - probably the most important of all, for a start
+- [Cookbook for R](http://www.cookbook-r.com/)
+- [My favorite RStudio tips and tricks](http://datacornering.com/my-favorite-rstudio-tips-and-tricks/)
+- [Samuel Chan](https://github.com/onlyphantom)
+- [Rcommander guide](https://socialsciences.mcmaster.ca/jfox/Misc/Rcmdr/Getting-Started-with-the-Rcmdr.pdf)
+## Linear Algebra
+- [Personality Project](https://personality-project.org/r/tutorials/linearalgebra.pdf)
+- [R-bloggers](https://www.r-bloggers.com/2019/05/r-companion-to-linear-algebra-step-by-step-part-1/)
+
+## Statistics
+- [R-tutor](http://www.r-tutor.com/)
+- [SimplyR(College of Staten Island)](https://www.math.csi.cuny.edu/Statistics/R/simpleR/index.html)
+- [Statsmethod](https://www.statmethods.net/index.html)
+
+## Data Science
+- [R for Data Science](https://r4ds.had.co.nz/index.html)
+- [R cookbook](https://rc2e.com/)
+- [dplyr cheat sheet](https://4.files.edl.io/b9e2/07/12/19/142839-a23788fb-1d3a-4665-9dc4-33bfd442c296.pdf)
+- [TSKam on RPubs](https://rpubs.com/tskam/mosaic_plot)
+- [Naimish Agarwal on RPubs](https://rpubs.com/agarwalnaimish/linalgbR)
+
+I have been experiencing compilation errors with Knitr when plots were involved. As such, I will cover visualization in a follow-up.
+As there is LaTeX support in R Markdown, I would also consider creating worksheets using RStudio in the future.
+
+> "There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."
+>
+> ---Jiddu Krishnamurti
+
+
+# Basic data structures
+## Vectors
+Our first data structure is the vector, which is a collection of data of the same class. In R, there are two classes of numerical data (`integer` and `numeric`).
+
+```{r}
+# integer
+a <- 3:8
+a
+class(a)
+length(a)
+```
+```{r}
+# numeric
+b <- c(3.4,7.8,5.6)
+class(b)
+```
+The `character` class stores strings.
+```{r}
+c <- c("KFC","MacDonald's","Popeyes","Gong Cha")
+c[2:3]
+```
+Notice that c[-3] **drops** the third entry *Popeyes*, unlike in Python where the third entry **from the last** would be indexed instead.
+```{r}
+c[-3]
+```
+We can use logical operators to create boolean masks.
+```{r}
+a%%3!=0
+```
+And just like in Python, we can use boolean masks to index vectors.
+```{r}
+# remove multiples of 3
+a[a%%3!=0]
+```
+```{r}
+rep(factor(LETTERS[3:6]), 5)
+```
+```{r}
+# Stock chart look-alike
+a <- cumsum(rnorm(1000))+80
+plot(a,type = "l")
+hist(a)
+```
+Vectors can be used in many ways.
+
+## Data frames
+The next data structure is the data frame. Though it has been updated with the tibble, we can still use data frames for many applications.
+
+[Working with tibbles in R](https://www.youtube.com/watch?v=EBk6PnvE1R4)

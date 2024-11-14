@@ -1,0 +1,155 @@
+---
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    toc: false
+    template: "./resources/setting.tex"
+# mainfont: NanumMyeongjo
+packagename: THE DRAGON SCROLL
+editor: Master Oogway
+# colsep: true
+ncol: 4
+boxbg: white
+themecol: red
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = "")
+library(purrr)
+```
+“There is always something more to learn. Even for a master.” *– Master Oogway*
+
+\bcolorbox
+# LAWS OF INDICES (6)
+\begin{align*}
+a^m \times a^n &= a^{m+n} & a^\frac{m}{n} &= (\sqrt[n]{a})^m \\
+a^m \div a^n &= a^{m-n} & a^{-m} &= \frac{1}{a^m} \\
+(a^m)^n &= a^{m \cdot n} & a^0 &= 1
+\end{align*}
+\ecolorbox
+
+“Your story may not have such a happy beginning but that does not make you who you are, it is the rest of it- who you choose to be”  
+*― Soothsayer from Kung Fu Panda 2*
+
+\bcolorbox
+# LAWS OF LOGARITHMS (9)
+\begin{align*}
+log_b(m \cdot n) &=  log_b m + log_b n \\
+log_b(\frac{m}{n}) &=  log_b m - log_b n \\
+log_b(m^k) &=  k \cdot log_b m \\
+log_b n \cdot log_n m &= log_b m
+\end{align*}
+For $log_b m$, $m>0$ and $b>1$
+\begin{align*}
+log_n m &= \frac{log_b m}{log_b n} & log_b b &= 1 \\
+log_b m &= \frac{1}{log_m b} & log_b 1 &= 0 \\
+log_{b^k} m &= \frac{1}{k}log_b m
+\end{align*}
+\ecolorbox
+
+“If you only do what you can do, you will never be more than who you are.”  
+*― Master Shifu*
+
+
+\bcolorbox
+# `reduce` 함수 응용
+
+Another plot
+```{r out.width="100%", echo=0}
+library("ggplot2")
+eq = function(x){x^2}
+ggplot(data.frame(x=c(-5,5)), aes(x=x)) + 
+  stat_function(fun=eq)
+```
+The above **plot** touches the x-axis at the origin.
+\ecolorbox
+
+
+\bcolorbox
+
+# `ggplot2` test
+
+Testing plots
+
+```{r out.width="100%"}
+x <- 1:10
+y <- sqrt(x)
+plot(x, y)
+```
+
+\ecolorbox
+
+"When will you realize? The more you take, the less you have."  
+*― Master Oogway*
+
+\bcolorbox
+![test](./resources/oogway.jpg){width=15%, height=15%}
+\ecolorbox
+
+
+"You heard me. Nothing! There is no secret ingredient. To make something special you just have to believe it's special."  
+*― Mr Ping, Po's father*
+
+
+
+“Your mind is like this water, my friend. When it is agitated, it becomes difficult to see. But if you allow it to settle, the answer becomes clear.”  
+*― Kung Fu Panda*
+
+
+There is a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.  
+*– Master Oogway*
+
+You are too concerned with what was and what will be.
+*– Master Oogway*
+
+
+“You are the master of your destiny: No one and nothing can come in between you and your destiny except you. Take destiny by the horns and have fun.”
+*– Kung Fu Panda*
+
+\bcolorbox
+
+# `reduce` 함수 응용 34
+
+이것이야말로 그들을 황금시대를 우는 풀이 시들어 청춘 속에 말이다. 이상의 구하지 사랑의 그들은 현저하게 따뜻한 피다. 이상의 붙잡아 속에서 피다. 보배를 품에 용
+
+\ecolorbox
+
+"The mark of a true hero is humility."  
+*– Master Shifu*
+
+Anything is possible when you have inner peace.  
+*– Master Shifu*
+
+You gotta let go of that stuff from the past
+because it just doesn’t matter.
+the only thing that matters is what you
+choose to be now.
+Po
+
+
+Before the battle of the fist, comes the battle of the mind.
+Master Shifu
+
+It doesn’t matter what I think,
+it only matters what the universe thinks.
+Master Shifu
+
+Sometimes, we do the wrong
+things for the right reasons.
+Mr. Ping
+
+\begin{align*}
+ 2x+1&=5\\
+ 2x&=5-1\\
+ 2x&=4\\
+ x&=\frac{4}{2}\\
+ x&=2
+\end{align*}
+
+\begin{equation}
+\begin{aligned} 
+X \sim \mathcal{N}(\mu, \sigma^2) &= 1steqr \\
+2ndeql &= 2ndeqr
+\end{aligned}
+(\#eq:tag)
+\end{equation}
